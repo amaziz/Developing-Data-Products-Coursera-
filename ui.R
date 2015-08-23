@@ -1,4 +1,5 @@
 library(shiny) 
+require(markdown)
 shinyUI(pageWithSidebar(
         headerPanel("Visualizing UC Berkeley Admissions in 1973"),
         tabPanel("Plot",
