@@ -1,6 +1,7 @@
 library(shiny) 
 shinyUI(pageWithSidebar(
         headerPanel("Visualizing UC Berkeley Admissions in 1973"),
+        tabPanel("Plot",
         sidebarPanel(
                 h3('Select the options to filter data'), 
                 checkboxGroupInput("gender", "Gender:", c(
@@ -31,5 +32,9 @@ shinyUI(pageWithSidebar(
                 h4('Departments:'),
                 verbatimTextOutput("odepartments"),
                 plotOutput('oplot')
+                )),
+                tabPanel("Documentation", mainPanel(
+                        includeMarkdown("README.md")
                 )
-))
+        
+)))
