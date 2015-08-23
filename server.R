@@ -10,7 +10,7 @@ shinyServer(function(input, output) {
         output$oplot <- renderPlot({
                 mosaicplot(
                         UCBAdmissions[{input$admittance},{input$gender},{input$departments}], 
-                        main ="", color = "pink"
+                        main ="", color = "lemonchiffon2"
                         )
                 mtext(expression(bold("Student admissions at UC Berkeley")),
                       outer = TRUE, cex = 5)
